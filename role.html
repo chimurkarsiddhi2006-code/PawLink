@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="PawLink case management workspace."
+  />
+
+  <title>PawLink Workspace</title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  />
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  />
+
+  <link
+    rel="stylesheet"
+    href="enhancements.css"
+  />
+
+</head>
+
+
+<body class="dashboard-page">
+
+
+  <!-- ==========================================
+       SIDEBAR
+  =========================================== -->
+
+  <aside class="dashboard-sidebar">
+
+    <a
+      class="brand"
+      href="index.html"
+    >
+
+      <span class="brand-mark">
+        ♥
+      </span>
+
+      <span>
+        Paw<span>Link</span>
+      </span>
+
+    </a>
+
+
+    <div class="workspace-label">
+      YOUR WORKSPACE
+    </div>
+
+
+    <nav class="dashboard-nav">
+
+      <a
+        class="active"
+        href="#overview"
+      >
+        ⌂
+        <span>Overview</span>
+      </a>
+
+
+      <a href="#cases">
+
+        ⌁
+
+        <span>
+          Cases
+        </span>
+
+        <b>
+          4
+        </b>
+
+      </a>
+
+
+      <a href="#map">
+
+        ⌖
+
+        <span>
+          Live map
+        </span>
+
+      </a>
+
+
+      <a href="#messages">
+
+        ♡
+
+        <span>
+          Messages
+        </span>
+
+      </a>
+
+
+      <a href="#resources">
+
+        ✦
+
+        <span>
+          Resources
+        </span>
+
+      </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+      <a href="network.html">
+        ♧ Switch workspace
+      </a>
+
+
+      <button
+        type="button"
+        class="sidebar-logout"
+        data-sign-out
+      >
+        ↪ Logout
+      </button>
+
+
+      <a href="index.html">
+        ← Back to PawLink
+      </a>
+
+    </div>
+
+  </aside>
+
+
+
+  <!-- ==========================================
+       MAIN DASHBOARD
+  =========================================== -->
+
+  <main class="dashboard-main">
+
+
+    <!-- HEADER -->
+
+    <header class="dashboard-header">
+
+      <button
+        class="dashboard-menu"
+        type="button"
+        data-dashboard-menu
+        aria-label="Open menu"
+      >
+        ☰
+      </button>
+
+
+      <div>
+
+        <p
+          class="eyebrow"
+          id="role-kicker"
+        >
+          YOUR PAWLINK WORKSPACE
+        </p>
+
+
+        <h1 id="dashboard-title">
+          Your care dashboard
+        </h1>
+
+      </div>
+
+
+
+      <!-- USER AREA -->
+
+      <div class="user-area">
+
+
+        <button
+          class="notification"
+          type="button"
+          aria-label="Notifications"
+        >
+          ♧
+          <i></i>
+        </button>
+
+
+        <div class="user-chip">
+
+          <span id="user-initials">
+            PL
+          </span>
+
+
+          <div>
+
+            <b id="user-name">
+              PawLink User
+            </b>
+
+
+            <small id="user-role">
+              Loading...
+            </small>
+
+          </div>
+
+        </div>
+
+
+        <button
+          class="logout-button"
+          type="button"
+          data-sign-out
+        >
+          Logout
+        </button>
+
+      </div>
+
+    </header>
+
+
+
+    <!-- ==========================================
+         WELCOME PANEL
+    =========================================== -->
+
+    <section
+      class="welcome-panel"
+      id="overview"
+    >
+
+      <div>
+
+        <span class="live-label">
+
+          <i></i>
+
+          LIVE IN YOUR AREA
+
+        </span>
+
+
+        <h2 id="welcome-title">
+          Loading your workspace...
+        </h2>
+
+
+        <p id="welcome-text">
+          Please wait while PawLink loads your account.
+        </p>
+
+      </div>
+
+
+      <a
+        class="button button-small"
+        id="primary-dashboard-action"
+        href="#cases"
+      >
+        View cases
+        <span>→</span>
+      </a>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         DASHBOARD STATS
+    =========================================== -->
+
+    <section
+      class="dashboard-stats"
+      id="dashboard-stats"
+    >
+
+    </section>
+
+
+
+    <!-- ==========================================
+         CASES
+    =========================================== -->
+
+    <section
+      class="dashboard-content"
+      id="cases"
+    >
+
+      <div class="content-heading">
+
+        <div>
+
+          <p class="eyebrow">
+            NEEDS ATTENTION
+          </p>
+
+
+          <h2>
+            Today’s priority cases
+          </h2>
+
+        </div>
+
+
+        <a href="#map">
+          View live map →
+        </a>
+
+      </div>
+
+
+      <div class="case-table-wrap">
+
+        <table class="case-table">
+
+          <thead>
+
+            <tr>
+
+              <th>
+                CASE
+              </th>
+
+              <th>
+                STATUS
+              </th>
+
+              <th>
+                LOCATION
+              </th>
+
+              <th>
+                UPDATED
+              </th>
+
+              <th></th>
+
+            </tr>
+
+          </thead>
+
+
+          <tbody id="case-table-body">
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ==========================================
+         LOWER DASHBOARD
+    =========================================== -->
+
+    <section
+      class="dashboard-lower"
+      id="map"
+    >
+
+
+      <!-- MAP -->
+
+      <div class="mini-map-card">
+
+        <div class="content-heading">
+
+          <div>
+
+            <p class="eyebrow">
+              LIVE COVERAGE
+            </p>
+
+
+            <h2>
+              Cases around you
+            </h2>
+
+          </div>
+
+
+          <span class="map-legend">
+
+            <i></i>
+
+            urgent
+
+          </span>
+
+        </div>
+
+
+        <div class="abstract-map">
+
+          <span
+            class="road road-one"
+          ></span>
+
+
+          <span
+            class="road road-two"
+          ></span>
+
+
+          <span
+            class="road road-three"
+          ></span>
+
+
+          <span
+            class="map-label label-one"
+          >
+            Lake Road
+          </span>
+
+
+          <span
+            class="map-label label-two"
+          >
+            Central Park
+          </span>
+
+
+          <button
+            class="map-pin urgent-pin"
+            title="Case PL-2084"
+          >
+            !
+          </button>
+
+
+          <button
+            class="map-pin blue-pin"
+            title="Case PL-2091"
+          >
+            ♥
+          </button>
+
+
+          <button
+            class="map-pin gold-pin"
+            title="Case PL-2097"
+          >
+            ⌂
+          </button>
+
+
+          <div class="map-popup">
+
+            <small>
+              8 MIN AWAY
+            </small>
+
+
+            <strong>
+              Injured indie dog
+            </strong>
+
+
+            <span>
+              PL-2084 · Needs pickup
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- ACTIVITY -->
+
+      <div
+        class="activity-card"
+        id="messages"
+      >
+
+        <div class="content-heading">
+
+          <div>
+
+            <p class="eyebrow">
+              SHARED UPDATES
+            </p>
+
+
+            <h2>
+              Care activity
+            </h2>
+
+          </div>
+
+
+          <a href="#messages">
+            See all
+          </a>
+
+        </div>
+
+
+        <div class="activity-list">
+
+
+          <div>
+
+            <span class="activity-avatar coral">
+              RS
+            </span>
+
+
+            <p>
+
+              <strong>
+                Dr. Riya
+              </strong>
+
+              added a treatment update
+
+              <small>
+                12 min ago · PL-2084
+              </small>
+
+            </p>
+
+          </div>
+
+
+
+          <div>
+
+            <span class="activity-avatar green">
+              AR
+            </span>
+
+
+            <p>
+
+              <strong>
+                Arjun · Rescue team
+              </strong>
+
+              is on the way
+
+              <small>
+                18 min ago · PL-2084
+              </small>
+
+            </p>
+
+          </div>
+
+
+
+          <div>
+
+            <span class="activity-avatar gold">
+              MK
+            </span>
+
+
+            <p>
+
+              <strong>
+                Meera · Happy Tails
+              </strong>
+
+              confirmed a recovery bed
+
+              <small>
+                31 min ago · PL-2079
+              </small>
+
+            </p>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- ==========================================
+       CHATBOT
+  =========================================== -->
+
+  <button
+    class="chat-launcher"
+    data-chat-toggle
+    aria-label="Open PawLink help chat"
+    type="button"
+  >
+    💬
+    <span>
+      Ask PawLink
+    </span>
+  </button>
+
+
+
+  <section
+    class="chatbot"
+    data-chatbot
+    hidden
+  >
+
+    <header>
+
+      <strong>
+        🐾 PawLink Assistant
+      </strong>
+
+
+      <button
+        type="button"
+        data-chat-close
+        aria-label="Close chat"
+      >
+        ×
+      </button>
+
+    </header>
+
+
+    <div
+      class="chat-messages"
+      data-chat-messages
+    >
+
+      <p class="bot-message">
+
+        Hi! I can help with reporting,
+        finding local care, and your
+        PawLink workspace.
+
+      </p>
+
+    </div>
+
+
+    <form data-chat-form>
+
+      <input
+        name="question"
+        placeholder="Ask a question…"
+        required
+      />
+
+
+      <button
+        type="submit"
+        aria-label="Send"
+      >
+        →
+      </button>
+
+    </form>
+
+  </section>
+
+
+
+  <!-- ==========================================
+       AUTH MODAL
+  =========================================== -->
+
+  <div
+    class="modal-backdrop"
+    data-auth-modal
+    aria-hidden="true"
+  >
+
+    <section
+      class="auth-modal"
+      role="dialog"
+      aria-modal="true"
+    >
+
+      <button
+        class="modal-close"
+        type="button"
+        data-close-auth
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+
+      <div class="auth-mark">
+        ♥
+      </div>
+
+
+      <p class="eyebrow">
+        Secure access
+      </p>
+
+
+      <h2 data-auth-heading>
+        Welcome back to PawLink
+      </h2>
+
+
+      <p>
+        Use your email to open the workspace
+        approved for your city.
+      </p>
+
+
+      <form data-auth-form>
+
+        <input
+          type="hidden"
+          name="mode"
+          value="signin"
+        />
+
+
+        <div
+          data-register-only
+          hidden
+        >
+
+          <label>
+
+            Full name
+
+            <input
+              name="name"
+              autocomplete="name"
+            />
+
+          </label>
+
+
+          <label>
+
+            City
+
+            <select name="city">
+
+              <option value="Bengaluru">
+                Bengaluru
+              </option>
+
+              <option value="Mumbai">
+                Mumbai
+              </option>
+
+              <option value="Delhi">
+                Delhi
+              </option>
+
+              <option value="Pune">
+                Pune
+              </option>
+
+              <option value="Hyderabad">
+                Hyderabad
+              </option>
+
+              <option value="Chennai">
+                Chennai
+              </option>
+
+            </select>
+
+          </label>
+
+
+          <label>
+
+            Access request
+
+            <select name="requestedRole">
+
+              <option value="citizen">
+                Citizen / reporter
+              </option>
+
+              <option value="ngo">
+                NGO / rescue team
+              </option>
+
+              <option value="authority">
+                Municipal authority
+              </option>
+
+              <option value="vet">
+                Veterinary clinic
+              </option>
+
+              <option value="shelter">
+                Shelter
+              </option>
+
+              <option value="pharmacy">
+                Pharmacy
+              </option>
+
+            </select>
+
+          </label>
+
+        </div>
+
+
+        <label>
+
+          Email address
+
+          <input
+            name="email"
+            type="email"
+            autocomplete="email"
+            required
+          />
+
+        </label>
+
+
+        <label>
+
+          Password
+
+          <input
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            minlength="6"
+            required
+          />
+
+        </label>
+
+
+        <p
+          class="auth-message"
+          data-auth-message
+          aria-live="polite"
+        ></p>
+
+
+        <button
+          class="button auth-submit"
+          type="submit"
+          data-auth-submit
+        >
+          Sign in securely
+        </button>
+
+      </form>
+
+
+      <p
+        class="auth-switch"
+        data-auth-switch
+      >
+        New to PawLink?
+
+        <button
+          type="button"
+          data-auth-mode="register"
+        >
+          Create an account
+        </button>
+
+      </p>
+
+    </section>
+
+  </div>
+
+
+
+  <!-- ==========================================
+       SCRIPTS
+  =========================================== -->
+
+  <script
+    src="app.js"
+    defer
+  ></script>
+
+
+  <script
+    type="module"
+    src="firebase.js"
+  ></script>
+
+
+</body>
+
+</html>
